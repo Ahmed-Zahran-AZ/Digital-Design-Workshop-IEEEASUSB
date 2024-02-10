@@ -1,0 +1,61 @@
+|four_b_add
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+S[0] <= full_adder:add1.Sum
+S[1] <= full_adder:add2.Sum
+S[2] <= full_adder:add3.Sum
+S[3] <= full_adder:add4.Sum
+cout <= full_adder:add4.Cout
+
+
+|four_b_add|full_adder:add1
+A => S1.IN0
+A => S3.IN0
+B => S1.IN1
+B => S3.IN1
+Cin => S2.IN1
+Cin => comb.IN1
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_b_add|full_adder:add2
+A => S1.IN0
+A => S3.IN0
+B => S1.IN1
+B => S3.IN1
+Cin => S2.IN1
+Cin => comb.IN1
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_b_add|full_adder:add3
+A => S1.IN0
+A => S3.IN0
+B => S1.IN1
+B => S3.IN1
+Cin => S2.IN1
+Cin => comb.IN1
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_b_add|full_adder:add4
+A => S1.IN0
+A => S3.IN0
+B => S1.IN1
+B => S3.IN1
+Cin => S2.IN1
+Cin => comb.IN1
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
