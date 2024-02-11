@@ -1,0 +1,41 @@
+|add_or_sub
+IN[0] => IN[0].IN2
+IN[1] => IN[1].IN2
+SEL => _.IN1
+SEL => _.IN1
+SUM <= mux_2x1:mux_sum.port3
+CARRY <= mux_2x1:mux_carry.port3
+
+
+|add_or_sub|half_add:add
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_or_sub|half_sub:sub
+X => D.IN0
+X => B.IN0
+Y => D.IN1
+Y => B.IN1
+D <= D.DB_MAX_OUTPUT_PORT_TYPE
+B <= B.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_or_sub|mux_2x1:mux_sum
+a => out.DATAA
+b => out.DATAB
+sel => out.OUTPUTSELECT
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_or_sub|mux_2x1:mux_carry
+a => out.DATAA
+b => out.DATAB
+sel => out.OUTPUTSELECT
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+

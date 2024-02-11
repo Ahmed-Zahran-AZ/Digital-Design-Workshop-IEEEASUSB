@@ -1,0 +1,9 @@
+|block1
+D[0] => comb.IN0
+D[1] => comb.IN1
+D[2] => comb.IN0
+A => comb.IN1
+B => comb.IN1
+OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
